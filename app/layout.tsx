@@ -12,7 +12,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className='flex h-screen'>
+          <div className='bg-[#121212] flex-1'>{children}</div>
+        </div>
+      </body>
     </html>
   )
 }

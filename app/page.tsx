@@ -1,7 +1,7 @@
  function HomePage() {
     return (
-        <section>
-            <h1>music</h1>
+        <section className="text-white">
+            <h1>Good evening</h1>
         </section>
     )
 }
