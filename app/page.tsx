@@ -1,7 +1,9 @@
- function HomePage() {
+function HomePage() {
     return (
         <section className="text-white">
-            <h1>Good evening</h1>
+            <div className="bg-[#535353]">
+                <h1>Good evening</h1>
+            </div>
         </section>
     )
 }
