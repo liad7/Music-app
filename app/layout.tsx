@@ -1,3 +1,4 @@
+import SideBar from '../cmps/side-bar/side-bar'
 import '../styles/globals.css'
 
 export const metadata = {
@@ -14,6 +15,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className='flex h-screen'>
+          <SideBar />
           <div className='bg-[#121212] flex-1'>{children}</div>
         </div>
       </body>
