@@ -3,20 +3,20 @@ import { QueueListIcon } from "@heroicons/react/24/outline"
 
 function NavBar() {
     return (
-        <ul>
-            <li className="px-2 h-10">
+        <ul className="font-bold mt-4 mb-6">
+            <li className="flex items-center px-2 h-10">
                 <a href="" className="flex items-center gap-4 px-4">
                     <HomeIcon className="h-6 w-6"/>
                     <span className="text-sm">Home</span>
                 </a>
             </li>
-            <li className="px-2 h-10">
+            <li className="flex items-center px-2 h-10">
                 <a href="" className="flex items-center gap-4 px-4">
                     <MagnifyingGlassIcon className="h-6 w-6"/>
                     <span className="text-sm">Search</span>
                 </a>
             </li>
-            <li className="px-2 h-10">
+            <li className="flex items-center px-2 h-10">
                 <a href="" className="flex items-center gap-4 px-4">
                     <QueueListIcon className="h-6 w-6 rotate-90"/>
                     <span className="text-sm">Your Library</span>
