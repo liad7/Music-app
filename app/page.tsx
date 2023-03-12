@@ -1,4 +1,5 @@
 import { AppHeader } from "../cmps/app-header"
+import { StationList } from "../cmps/station-list"
 
 function HomePage() {
     return (
@@ -6,6 +7,7 @@ function HomePage() {
             <AppHeader />
             <div className="bg-[#535353]">
                 <h1>Good evening</h1>
+                <StationList />
             </div>
         </section>
     )
