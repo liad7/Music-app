@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react"
 import { stationService } from "../services/station.service"
+import { HeroStation } from "./hero-station"
 import { StationPreview } from "./station-preview"
 
 export function StationList() {
     const [stations, setStations] = useState([])
-    console.log('stations:', stations)
 
     useEffect(() => {
         loadStations()
@@ -17,11 +17,12 @@ export function StationList() {
         setStations(stations as never[])
     }
     return (
-        <section>
+        <section className="px-2.5 md:px-7 pt-20">
             {!stations ?
                 <p>Loading...</p>
                 :
                 <>
+                    <HeroStation stations={[...stations].splice(0,6)} />
                     {stations.map(station => <StationPreview key={station._id} station={station} />)}
                 </>
             }

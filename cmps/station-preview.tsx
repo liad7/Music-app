@@ -4,6 +4,6 @@ type Props = {
 
 export function StationPreview({ station }: Props) {
     return (
-        <section>stat</section>
+        <section></section>
     )
 }
