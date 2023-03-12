@@ -13,7 +13,7 @@ export function AppHeader() {
                     </div>
                     <div className="flex font-bold">
                         <Link href={``} className="text-white login-sighup-btn">Sign up</Link>
-                        <Link href={``} className="text-black rounded-3xl bg-white login-sighup-btn">Log in</Link>
+                        <Link href={``} className="text-black rounded-3xl bg-white login-sighup-btn hover:scale-105">Log in</Link>
                     </div>
                 </nav>
             </div>
