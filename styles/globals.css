@@ -2,7 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-    --bg-color-main:#535353;
-    --bg-color-sec:#121212;
+:root {
+    --bg-color-main: #535353;
+    --bg-color-sec: #121212;
+}
+
+@layer components {
+    .login-sighup-btn {
+        @apply mx-1 py-3 px-8
+    }
+
+    .arrow-btn {
+        @apply bg-[#000000b3] rounded-full flex items-center w-8 h-8
+    }
 }
