@@ -1,9 +1,11 @@
+import { HomeIcon } from "../../svg/icon-lib"
 
 function NavBar() {
     return (
         <ul>
             <li>
                 <a href="">
+                    <HomeIcon />
                     <span>Home</span>
                 </a>
             </li>
