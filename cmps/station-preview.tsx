@@ -4,6 +4,12 @@ type Props = {
 
 export function StationPreview({ station }: Props) {
     return (
-        <section></section>
+        <section className="p-4 rounded-md">
+            <div>
+                <img src={station.imgUrl} alt="" />
+                <button></button>
+            </div>
+
+        </section>
     )
 }
