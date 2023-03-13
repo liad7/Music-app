@@ -11,7 +11,7 @@ export function HeroStation({ station }: Props) {
     const [isHovered, setIsHovered] = useState(false)
 
     return (
-        <div key={station._id} className="flex items-center justify-between rounded bg-[#2c2c2c] hover:bg-[#333]"
+        <div key={station._id} className="flex items-center justify-between cursor-pointer rounded bg-[#2c2c2c] hover:bg-[#333]"
             onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
             <div className="flex items-center">
                 <img src={station.imgUrl} alt="" className="rounded-l w-20 h-20" />
