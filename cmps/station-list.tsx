@@ -22,7 +22,11 @@ export function StationList() {
                 <p>Loading...</p>
                 :
                 <>
-                    <HeroStation stations={[...stations].splice(0,6)} />
+                    <section className="grid grid-cols-2 gap-7">
+                        {[...stations].splice(0, 6).map(station => (
+                            <HeroStation station={station} />
+                        ))}
+                    </section>
                     {stations.map(station => <StationPreview key={station._id} station={station} />)}
                 </>
             }
