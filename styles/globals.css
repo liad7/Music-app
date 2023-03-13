@@ -15,4 +15,8 @@
     .arrow-btn {
         @apply bg-[#000000b3] rounded-full flex items-center w-8 h-8
     }
+    
+    .play-btn {
+        @apply transition-all ease-in flex justify-center items-center mr-2 rounded-full bg-[#1ed760] w-12 h-12 shadow-black shadow-md
+    }
 }
