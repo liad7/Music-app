@@ -11,7 +11,7 @@ export function StationPreview({ station }: Props) {
     const [isHovered, setIsHovered] = useState(false)
 
     return (
-        <Link href={``}>
+        <Link href={`/station/${station._id}`}>
             <section className="p-5 rounded-md bg-[#1a1a1a]"
                 onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                 <div className="relative mb-2">
