@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { AppHeader } from "../../../cmps/app-header"
-import { SongList } from "../../../cmps/song-list"
+import { SongList } from "../../../cmps/song/song-list"
 import { stationService } from "../../../services/station.service"
 
 type Props = {
