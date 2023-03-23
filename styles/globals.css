@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    font-family: montserrat-bold, Arial;
+}
+
 @layer components {
-    .station-details>*{
+    .station-details>* {
         @apply px-2.5 md:px-7
     }
 
@@ -19,7 +23,7 @@
         @apply transition-all ease-in flex justify-center items-center mr-2 rounded-full bg-[#1ed760] w-12 h-12 shadow-black shadow-md cursor-pointer
     }
 
-    .nav-link{
+    .nav-link {
         @apply flex items-center gap-4 px-4 opacity-70 hover:opacity-100
     }
 

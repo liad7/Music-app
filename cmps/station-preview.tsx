@@ -22,6 +22,7 @@ export function StationPreview({ station }: Props) {
                     </button>
                 </div>
                 <h3 className="overflow-hidden font-bold pb-1 pt-2.5">{station.name}</h3>
+                <p className="min-h-[3.5em] opacity-50"></p>
             </section>
         </Link>
     )
