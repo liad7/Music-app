@@ -1,3 +1,4 @@
+import { AppHeader } from '../cmps/app-header'
 import SideBar from '../cmps/side-bar/side-bar'
 import '../styles/globals.css'
 
@@ -16,7 +17,10 @@ export default function RootLayout({
       <body>
         <div className='flex h-screen'>
           <SideBar />
-          <div className='bg-[#121212] flex-1 overflow-y-scroll'>{children}</div>
+          <div className='flex-1 overflow-y-scroll bg-[#121212]'>
+            <AppHeader />
+            <div className='bg-[#121212]'>{children}</div>
+          </div>
         </div>
       </body>
     </html>

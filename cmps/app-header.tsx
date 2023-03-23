@@ -8,8 +8,8 @@ export function AppHeader() {
             <div className="bg-[#af9d5c] h-full w-full">
                 <nav className="flex justify-between items-center h-full w-full px-1 md:px-6">
                     <div className="flex items-center gap-4">
-                        <div className="arrow-btn"><ChevronLeftIcon className="w-6 h-6 ml-1"/></div>
-                        <div className="arrow-btn"><ChevronRightIcon className="w-6 h-6 ml-1.5"/></div>
+                        <div className="arrow-btn"><ChevronLeftIcon className="w-6 h-6 ml-1 text-white cursor-pointer"/></div>
+                        <div className="arrow-btn"><ChevronRightIcon className="w-6 h-6 ml-1.5 text-white cursor-pointer"/></div>
                     </div>
                     <div className="flex font-bold">
                         <Link href={``} className="text-white login-sighup-btn">Sign up</Link>

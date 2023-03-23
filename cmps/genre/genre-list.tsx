@@ -1,4 +1,5 @@
 'use client'
+
 import { utilService } from "../../services/util.service"
 import { GenrePreview } from "./genre-preview"
 
@@ -12,6 +13,7 @@ export function GenreList() {
         </section>
     )
 }
+
 const genres = [
     {
         id: utilService.makeId(),
