@@ -16,7 +16,7 @@ export default function RootLayout({
       <body>
         <div className='flex h-screen'>
           <SideBar />
-          <div className='bg-[#121212] flex-1'>{children}</div>
+          <div className='bg-[#121212] flex-1 overflow-y-scroll'>{children}</div>
         </div>
       </body>
     </html>
