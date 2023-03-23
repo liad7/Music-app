@@ -22,7 +22,7 @@ export default function StationDetails({ params: { id } }: Props) {
         setStation(station as never)
     }
     return (
-        <section className="station-details">
+        <section className="page-padding">
             {/* <AppHeader /> */}
             <div className="flex items-end pb-6 bg-[#b17269] pt-20">
                 <img className="h-56 shadow shadow-black" src={station.imgUrl} alt="" />

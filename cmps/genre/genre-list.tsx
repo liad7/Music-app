@@ -1,12 +1,14 @@
+'use client'
 import { utilService } from "../../services/util.service"
+import { GenrePreview } from "./genre-preview"
 
 export function GenreList() {
     return (
-        <section>
-            <h1>Browse all</h1>
-<div className="grid ">
-{genres.map(genre=> )}
-</div>
+        <section className="pt-16">
+            <h1 className="text-white text-3xl font-bold mb-5">Browse all</h1>
+            <div className="genre-list">
+                {genres.map(genre => <GenrePreview key={genre.id} genre={genre} />)}
+            </div>
         </section>
     )
 }
@@ -29,11 +31,6 @@ const genres = [
     {
         id: utilService.makeId(),
         name: 'made for you',
-        imgUrl: 'https://res.cloudinary.com/damrhms1q/image/upload/v1674723847/Made_For_You_i1fiyc.png',
-    },
-    {
-        id: utilService.makeId(),
-        name: 'rock',
         imgUrl: 'https://res.cloudinary.com/damrhms1q/image/upload/v1674723847/Made_For_You_i1fiyc.png',
     },
     {
