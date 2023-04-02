@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export function AppHeader() {
     return (
-        <header className="relative h-16">
+        <header className="absolute h-16 w-full">
             {/* background div */}
             <div className="bg-[#af9d5c] h-full w-full">
                 <nav className="flex justify-between items-center h-full w-full px-1 md:px-6">

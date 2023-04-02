@@ -8,7 +8,7 @@ body {
 
 @layer components {
     .page-padding>* {
-        @apply px-2.5 md:px-7
+        @apply px-2.5 md:px-7 pt-16
     }
 
     .genre-list{

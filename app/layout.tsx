@@ -17,7 +17,7 @@ export default function RootLayout({
       <body>
         <div className='flex h-screen'>
           <SideBar />
-          <div className='flex-1 overflow-y-scroll bg-[#121212]'>
+          <div className='flex-1 overflow-y-scroll bg-[#121212] relative'>
             <AppHeader />
             <div className='bg-[#121212]'>{children}</div>
           </div>

@@ -5,13 +5,13 @@ function NavBar() {
     return (
         <ul className="font-bold mt-4 mb-6">
             <li className="flex items-center px-2 h-10">
-                <a href="" className="nav-link">
+                <a href="/" className="nav-link">
                     <HomeIcon className="h-6 w-6"/>
                     <span className="text-sm">Home</span>
                 </a>
             </li>
             <li className="flex items-center px-2 h-10">
-                <a href="" className="nav-link">
+                <a href="search" className="nav-link">
                     <MagnifyingGlassIcon className="h-6 w-6"/>
                     <span className="text-sm">Search</span>
                 </a>

@@ -11,7 +11,7 @@ type Props = {
 }
 
 export default function StationDetails({ params: { id } }: Props) {
-    const [station, setStation] = useState([])
+    const [station, setStation] = useState<Station | null>(null)
 
     useEffect(() => {
         loadStation()
@@ -19,25 +19,26 @@ export default function StationDetails({ params: { id } }: Props) {
 
     const loadStation = async () => {
         const station = await stationService.getById(id)
-        setStation(station as never)
+        setStation(station)
     }
     return (
         <section className="page-padding">
             {/* <AppHeader /> */}
             <div className="flex items-end pb-6 bg-[#b17269] pt-20">
-                <img className="h-56 shadow shadow-black" src={station.imgUrl} alt="" />
+                <img className="h-56 shadow shadow-black" src={station?.imgUrl} alt="" />
                 <div className="flex flex-col px-6 text-white">
                     <p className="mt-4">PLAYLIST</p>
-                    <h1 className="font-bold text-7xl my-3">{station.name}</h1>
+                    <h1 className="font-bold text-7xl my-3">{station?.name}</h1>
                     <p>
-                        <span>PLAYLIST</span>
-                        •
-                        {station.songs?.length} songs
+                        <span className="font-bold">PLAYLIST </span>
+                        <span className="font-light">
+                            • {station?.songs?.length} songs
+                        </span>
                     </p>
                 </div>
             </div>
 
-            <div className="flex items-center py-6 bg-gradient-to-b from-[#b17269] to-[##121212]">
+            <div className="flex items-center py-6 bg-gradient-to-b from-[#b17269] via-[#743f37] to-[##121212]">
                 <button className="play-btn w-14 h-14 mr-5 scale-105">
                     <svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon"><path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path></svg>
                 </button>
@@ -49,7 +50,7 @@ export default function StationDetails({ params: { id } }: Props) {
                 </div>
             </div>
 
-            <SongList songs={station.songs} />
+            <SongList songs={station?.songs} />
         </section>
     )
 }
