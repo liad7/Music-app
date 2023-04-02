@@ -13,12 +13,13 @@ export const stationService = {
     getEmptyStation,
 }
 
-async function query(filterBy = {}):Promise<Station[]> {
+async function query(filterBy = {}): Promise<Station[]> {
+    console.log('filterBy:', filterBy)
     let stations = await storageService.query(STORAGE_KEY)
     return stations
 }
 
-function getById(stationId: string):Promise<Station> {
+function getById(stationId: string): Promise<Station> {
     return storageService.get(STORAGE_KEY, stationId)
 }
 
