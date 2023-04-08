@@ -10,12 +10,29 @@ export const stationService = {
     getById,
     save,
     remove,
+    searchSongs,
     getEmptyStation,
 }
 
-async function query(filterBy = {}): Promise<Station[]> {
+async function query(filterBy = ''): Promise<Station[]> {
     console.log('filterBy:', filterBy)
     let stations = await storageService.query(STORAGE_KEY)
+    if (filterBy) {
+        const regex = new RegExp(filterBy, 'i')
+        stations = stations.filter((station: Station): Boolean => regex.test(station.name))
+    }
+    return stations
+}
+
+async function searchSongs(filterBy = ''): Promise<[]> {
+    let stations = await storageService.query(STORAGE_KEY)
+    if (filterBy) {
+        const regex = new RegExp(filterBy, 'i')
+        stations = stations.reduce((acc: Song[], station: Station): Song[] => {
+            const songs = station.songs.filter(song => regex.test(song.title) || regex.test(song.channelTitle))
+            return acc.concat(songs)
+        },[])
+    }
     return stations
 }
 

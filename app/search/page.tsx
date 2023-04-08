@@ -6,12 +6,17 @@ import { utilService } from "../../services/util.service"
 import { stationService } from "../../services/station.service"
 import { MagnifyingGlassIcon, XMarkIcon } from "@heroicons/react/24/solid"
 import { usePathname } from "next/navigation"
+import { SearchResult } from "../../cmps/song/search-result"
 
 export default function Search() {
+    const [songs, setSongs] = useState<Song[]>([])
     const pathname = usePathname()
-
-    const searchRef = useRef(utilService.debounce(stationService.query, 500))
     const [searchValue, setSearchValue] = useState('')
+
+    const loadSearchSongs = async (value: string) => {
+        setSongs(await stationService.searchSongs(value))
+    }
+    const searchRef = useRef(utilService.debounce(loadSearchSongs, 500))
 
     const search = ({ target }: React.ChangeEvent<HTMLInputElement>): void => {
         setSearchValue(target.value)
@@ -33,6 +38,10 @@ export default function Search() {
                 <XMarkIcon className={`w-6 h-6 cursor-pointer opacity-${searchValue ? '1' : '0'}`}
                     onClick={() => setSearchValue('')} />
             </div>}
-        <GenreList />
+        {searchValue?
+            <SearchResult songs={songs} />
+            :
+            <GenreList />
+        }
     </main>
 }
