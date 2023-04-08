@@ -5,7 +5,7 @@ import { GenrePreview } from "./genre-preview"
 
 export function GenreList() {
     return (
-        <section className="pt-16">
+        <section className="max-md:pt-36">
             <h1 className="text-white text-3xl font-bold mb-5">Browse all</h1>
             <div className="genre-list">
                 {genres.map(genre => <GenrePreview key={genre.id} genre={genre} />)}

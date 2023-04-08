@@ -6,7 +6,7 @@ import { HeroStation } from "./hero-station"
 import { StationList } from "./station-list"
 
 export function StationIndex() {
-    const [stations, setStations] = useState([])
+    const [stations, setStations] = useState<Station[]>([])
     const tags = ['Made For you', 'Chill', 'Recently played']
 
     useEffect(() => {
@@ -23,7 +23,7 @@ export function StationIndex() {
     }
     return (
         <section>
-            {!stations ?
+            {!stations.length ?
                 <p>Loading...</p>
                 :
                 <>
@@ -35,7 +35,6 @@ export function StationIndex() {
                     {tags.map(tag => (
                         <StationList key={tag} tag={tag} stations={getStationsByTag(tag)} />
                     ))}
-                    {/* {stations.map(station => <StationPreview key={station._id} station={station} />)} */}
                 </>
             }
         </section>
