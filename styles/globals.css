@@ -52,4 +52,30 @@ body {
         border-radius: .4em;
 
     }
+
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        transition: all .1s;
+        border: none;
+        height: 3px;
+        width: 3px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .volume-range {
+        max-width: 26%;
+        -webkit-appearance: none;
+        background-color: #a7a7a7;
+        height: 3.5px;
+        border-radius: 2rem;
+        margin-inline-end: 32px;
+    }
+
+    .volume-range:hover::-webkit-slider-thumb {
+        border: none;
+        height: 12px;
+        width: 12px;
+        background: #fff
+    }
 }
