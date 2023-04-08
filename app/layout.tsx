@@ -1,3 +1,4 @@
+import { AppFooter } from '../cmps/app-footer'
 import { AppHeader } from '../cmps/app-header'
 import SideBar from '../cmps/side-bar/side-bar'
 import '../styles/globals.css'
@@ -21,6 +22,7 @@ export default function RootLayout({
             <AppHeader />
             <div className='bg-[#121212]'>{children}</div>
           </div>
+          <AppFooter />
         </div>
       </body>
     </html>
