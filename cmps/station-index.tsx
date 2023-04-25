@@ -21,6 +21,7 @@ export function StationIndex() {
     const getStationsByTag = (tag:string): Station[] => {
         return stations.filter(station => station?.tags?.includes(tag)).splice(0, 4)
     }
+
     return (
         <section>
             {!stations.length ?
