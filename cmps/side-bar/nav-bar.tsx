@@ -11,13 +11,13 @@ function NavBar() {
                 </a>
             </li>
             <li className="flex items-center px-2 h-10">
-                <a href="search" className="nav-link">
+                <a href="/search" className="nav-link">
                     <MagnifyingGlassIcon className="h-6 w-6"/>
                     <span className="text-sm">Search</span>
                 </a>
             </li>
             <li className="flex items-center px-2 h-10">
-                <a href="library" className="nav-link">
+                <a href="/library" className="nav-link">
                     <QueueListIcon className="h-6 w-6 rotate-90"/>
                     <span className="text-sm">Your Library</span>
                 </a>
